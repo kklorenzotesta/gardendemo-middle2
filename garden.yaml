@@ -1,5 +1,5 @@
 kind: Run
-name: say-hello
+name: say-hello2
 type: exec
 dependencies: [deploy.demoback]
 spec:

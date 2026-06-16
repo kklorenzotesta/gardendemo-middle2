@@ -6,7 +6,7 @@ environments:
 defaultEnvironment: dev
 sources:
   - name: demo-dep
-    repositoryUrl: https://github.com/kklorenzotesta/gardendemo-dep.git#1.0.0
+    repositoryUrl: https://github.com/kklorenzotesta/gardendemo-dep.git#2.0.0
 providers:
   - name: local-kubernetes
     environments: [dev]
