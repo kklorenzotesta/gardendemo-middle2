@@ -1,6 +1,5 @@
 kind: Run
 name: say-hello2
 type: exec
-dependencies: [deploy.demoback]
 spec:
   command: ["echo", "Hello ${local.username}"]
