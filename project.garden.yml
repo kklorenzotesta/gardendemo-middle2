@@ -1,0 +1,19 @@
+apiVersion: garden.io/v2
+kind: Project
+name: gardendemo-middle2
+environments:
+  - name: dev
+defaultEnvironment: dev
+sources:
+  - name: demo-dep
+    repositoryUrl: https://github.com/kklorenzotesta/gardendemo-dep.git#1.0.0
+providers:
+  - name: local-kubernetes
+    environments: [dev]
+    setupIngressController: false
+    defaultNamespace: middle2-${git.branch}-${kebabCase(local.username)}
+    deploymentRegistry:
+      hostname: k3d-myregistry.localhost
+      port: 12345
+      insecure: true
+      namespace: middle2-${git.branch}-${kebabCase(local.username)}
